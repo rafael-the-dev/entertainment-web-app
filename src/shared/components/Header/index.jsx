@@ -10,7 +10,7 @@ import avatar from '../../../assets/images/avatars/image-avatar.png'
 
 const Header = () => {
     return (
-        <header className={classNames(`flex align-center justify-between`)}>
+        <header className={classNames(`flex align-center justify-between py-4 px-[5%]`)}>
             <Link to="/">
                 <Logo />
             </Link>
