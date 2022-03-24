@@ -13,7 +13,7 @@ const Header = () => {
     const classes = useStyles();
     
     return (
-        <header className={classNames(`flex align-center justify-between py-4 px-[5%]`)}>
+        <header className={classNames(`flex align-center justify-between py-3 px-[5%] bg-blue-600 rounded-xl`)}>
             <Link to="/">
                 <Logo />
             </Link>
