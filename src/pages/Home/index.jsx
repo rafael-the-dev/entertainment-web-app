@@ -7,7 +7,7 @@ const Home = () => {
     const classes = useStyles();
 
     return (
-        <main className={classNames('py-4 md:grow')}>
+        <main className={classNames('py-4 px-[5%] md:grow md:px-4')}>
             <TextField
                 classes={{ root: classes.textField }}
                 fullWidth

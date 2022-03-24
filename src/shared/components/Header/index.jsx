@@ -22,8 +22,8 @@ const Header = () => {
     ), [ classes ]);
     
     return (
-        <header className={classNames(`flex align-center justify-between py-3 px-[5%] bg-blue-600 rounded-xl
-            md:flex-col md:h-screen md:px-3`)}>
+        <header className={classNames(`flex align-center justify-between py-3 px-[5%] bg-blue-600 md:rounded-xl
+            md:flex-col md:px-3`, classes.header)}>
             <div className={classNames(`flex items-center justify-between md:flex-col grow md:grow-0
                 md:justify-start`)}>
                 <Link to="/">
