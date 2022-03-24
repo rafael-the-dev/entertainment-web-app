@@ -6,7 +6,7 @@ import classNames from 'classnames'
 const App = () => {
     return (
         <Router>
-            <div className={classNames(`flex flex-col items-stretch md:flex-row items-start px-[5%] py-3`)}>
+            <div className={classNames(`flex flex-col items-stretch md:flex-row items-start px-[5%] py-3 md:px-4`)}>
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
