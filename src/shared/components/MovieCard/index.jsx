@@ -36,7 +36,7 @@ const MovieCard = ({ isTrending }) => {
                     src=""
                 />
             </div>
-            { isTrending ? <CardDescription /> : <CardDescription /> }
+            <CardDescription /> 
         </article>
     );
 };
