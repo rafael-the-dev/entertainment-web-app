@@ -5,15 +5,15 @@ import { useStyles } from "./styles";
 
 
 
-const MovieCard = ({ isTrending }) => {
+const MovieCard = ({ isTrending, title, thumbnail }) => {
     const classes = useStyles();
 
     const CardDescription = useCallback(() => (
         <div 
             className={classNames({ [classes.cardContentTrending]: isTrending }, 
-            { 'absolute bottom-[-20px] left-[rem]': isTrending } )}>
+            { 'absolute bottom-0 left-0 px-4': isTrending }, `w-full text-slate-100 py-2` )}>
             <Typography
-                className={classNames(`flex items-center`)}
+                className={classNames(`flex items-center text-sm`)}
                 component="p">
                 <span>2019</span>
                 <span>2019</span>
@@ -29,11 +29,11 @@ const MovieCard = ({ isTrending }) => {
 
     return (
         <article className={classNames(`relative`)}>
-            <div>
+            <div className={classNames(classes.trendingImageContainer)}>
                 <img
-                    alt=""
-                    className={classNames()}
-                    src=""
+                    alt={title}
+                    className={classNames('block h-full w-full object-cover')}
+                    src={`${process.env.PUBLIC_URL}/images${thumbnail.trending.small}`}
                 />
             </div>
             <CardDescription /> 

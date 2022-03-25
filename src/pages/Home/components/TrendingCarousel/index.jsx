@@ -2,6 +2,7 @@ import ItemsCarousel from 'react-items-carousel'
 import MovieCard from '../../../../shared/components/MovieCard'
 import { useStyles } from './styles'
 import { useState } from 'react'
+import data from '../../../../data.json'
 
 const TrendingCarousel = ({ numberOfCards }) => {
     const classes = useStyles();
@@ -21,7 +22,9 @@ const TrendingCarousel = ({ numberOfCards }) => {
             leftChevron={<button style={{height: '100px', width: '30px'}}>{'<'}</button>}
           >
             {
-                [].map((el, index) => <MovieCard {...el} isTrending={true} key={index}  /> )
+                data
+                    .filter(item => item.isTrending)
+                    .map((el, index) => <MovieCard {...el} isTrending={true} key={index}  /> )
             }
         </ItemsCarousel>
     );

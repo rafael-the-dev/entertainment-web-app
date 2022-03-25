@@ -25,7 +25,7 @@ const Home = () => {
             />
             <div className={classNames(classes.carouselWrapper)}>
                 <Hidden mdUp>
-                    <TrendingCarousel numberOfCards={2}/>
+                    <TrendingCarousel numberOfCards={1}/>
                 </Hidden>
                 <Hidden mdDown numberOfCards={3}>
                     <TrendingCarousel />
