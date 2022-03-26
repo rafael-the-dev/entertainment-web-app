@@ -18,5 +18,8 @@ export const useStyles = makeStyles(theme => ({
         '&::before': {
             backgroundImage: `url(${tvSeriesIcon})`
         }
+    },
+    saveButton: {
+        backgroundColor: '#10141e54 !important'
     }
 }));

@@ -1,8 +1,8 @@
-import { Typography } from "@mui/material";
+import { IconButton, Typography } from "@mui/material";
 import classNames from "classnames";
 import { useCallback, useMemo } from "react";
 import { useStyles } from "./styles";
-
+import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 
 const MovieCard = ({ category, isTrending, title, thumbnail }) => {
@@ -37,13 +37,16 @@ const MovieCard = ({ category, isTrending, title, thumbnail }) => {
 
     return (
         <article className={classNames(`relative`)}>
-            <div className={classNames(classes.trendingImageContainer)}>
+            <div className={classNames(classes.trendingImageContainer, `rounded-sm`)}>
                 <img
                     alt={title}
-                    className={classNames('block h-full w-full object-cover')}
+                    className={classNames('block h-full w-full object-cover rounded-sm')}
                     src={`${process.env.PUBLIC_URL}/images${thumbnail.trending.small}`}
                 />
             </div>
+            <IconButton className={classNames(classes.saveButton, 'absolute top-[10px] right-[10px]')}>
+                <BookmarkIcon  className={classNames(`text-slate-100`)} />
+            </IconButton>
             <CardDescription /> 
         </article>
     );
