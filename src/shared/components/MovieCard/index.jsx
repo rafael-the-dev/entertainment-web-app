@@ -21,8 +21,8 @@ const MovieCard = ({ category, isTrending, title, thumbnail }) => {
                 className={classNames(`flex items-center text-xs mb-1`)}
                 component="p">
                 <span className="mr-2">2019</span> *
-                <span className={classNames(categories[category], `before::bg-no-repeat before::bg-left
-                    mx-2`)}>
+                <span className={classNames(categories[category], `before:bg-no-repeat before:bg-left
+                    mx-2 before:h-[10px] before:w-[10px] before:inline-block before:mr-2 flex items-center`)}>
                     { category }
                 </span> *
                 <span className={classNames(`uppercase ml-2`)}>pg</span>
