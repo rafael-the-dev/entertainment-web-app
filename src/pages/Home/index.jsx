@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Hidden, InputAdornment, TextField } from '@mui/material'
+import { Hidden, InputAdornment, TextField, Typography } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import { useStyles } from './styles'
 import TrendingCarousel from './components/TrendingCarousel'
@@ -23,14 +23,22 @@ const Home = () => {
                 }}
                 variant="standard"
             />
-            <div className={classNames(classes.carouselWrapper)}>
+            <section className={classNames(`mt-4`)}>
+                <Typography
+                    className={classNames(`mb-3 text-slate-100`)}
+                    component="h2"
+                    variant="h6">
+                    Trending
+                </Typography>
+               <div className={classNames(classes.carouselWrapper, ``)}>
                 <Hidden mdUp>
-                    <TrendingCarousel numberOfCards={1}/>
-                </Hidden>
-                <Hidden mdDown numberOfCards={3}>
-                    <TrendingCarousel />
-                </Hidden>
-            </div>
+                        <TrendingCarousel numberOfCards={1}/>
+                    </Hidden>
+                    <Hidden mdDown numberOfCards={3}>
+                        <TrendingCarousel />
+                    </Hidden>
+               </div>
+            </section>
         </main>
     );
 };
