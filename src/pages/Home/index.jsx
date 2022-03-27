@@ -30,12 +30,12 @@ const Home = () => {
                     variant="h6">
                     Trending
                 </Typography>
-               <div className={classNames(classes.carouselWrapper, ``)}>
-                <Hidden mdUp>
-                        <TrendingCarousel numberOfCards={1}/>
+               <div className={classNames(classes.carouselWrapper, `w-full max-w-full`)}>
+                    <Hidden mdUp>
+                        <TrendingCarousel numberOfCards={1} />
                     </Hidden>
-                    <Hidden mdDown numberOfCards={3}>
-                        <TrendingCarousel />
+                    <Hidden mdDown>
+                        <TrendingCarousel numberOfCards={3} />
                     </Hidden>
                </div>
             </section>
