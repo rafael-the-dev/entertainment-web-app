@@ -15,7 +15,7 @@ const TrendingCarousel = ({ numberOfCards }) => {
             infiniteLoop={false}
             gutter={12}
             numberOfCards={numberOfCards}
-            firstAndLastGutter={true}
+            firstAndLastGutter={false}
             activeItemIndex={activeItemIndex}
             requestToChangeActive={setActiveItemIndex}
             rightChevron={<button style={{height: '100px', width: '30px'}}>{'>'}</button>}
